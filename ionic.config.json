@@ -1,0 +1,7 @@
+{
+  "name": "PropSync System",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

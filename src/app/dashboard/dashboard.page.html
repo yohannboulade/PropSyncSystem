@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tableau de bord</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Mes loyers</ion-card-title>
+            <ion-card-subtitle>Répartition par bien</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <canvas id="loyer" #loyer></canvas>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Mes bénéfices prévisionels</ion-card-title>
+            <ion-card-subtitle>Répartition par bien</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <canvas id="benef" #benef></canvas>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+</ion-content>
