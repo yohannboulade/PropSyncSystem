@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,9 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Tableau de bord', url: '/dashboard', icon: 'mail' },
-    { title: 'Mes logements', url: '/housing', icon: 'paper-plane' },
+    { title: 'Tableau de bord', url: '/dashboard', icon: 'apps' },
+    { title: 'Mes logements', url: '/housing', icon: 'business' },
+    { title: 'Mes locataires', url: '/auth', icon: 'accessibility' },
+    { title: 'Mes contacts', url: '/auth', icon: 'briefcase' },
+    { title: 'Paramettres', url: '/auth', icon: 'options' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+
+  constructor(private authService: AuthService) { }
+
+  get user() {
+    const user = this.authService.getCurrentUser();
+    return user ? user : null;
+  }
+
+  logOut(){
+    this.authService.signOut();
+  }
 }
