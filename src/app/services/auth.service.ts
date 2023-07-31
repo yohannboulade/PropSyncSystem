@@ -27,7 +27,7 @@ export class AuthService {
 
     // Créez une nouvelle promesse qui se résout lorsque l'état d'authentification est connu.
     this.authReady = new Promise((resolve, reject) => {
-      firebase.auth().onAuthStateChanged((user) => {
+      firebase.auth().onAuthStateChanged((user: any) => {
         this.user = user;
         resolve();
       }, reject);
@@ -52,11 +52,21 @@ export class AuthService {
   // fonction de connexion
   async signInWithEmailAndPassword(email: string, password: string) {
     await firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
-    await firebase.auth().signInWithEmailAndPassword(email, password);
+    const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
+    
+    // Le token peut être obtenu à partir de l'objet User dans userCredential
+    let token = null;
+    if(userCredential.user){
+      token = await userCredential.user.getIdToken();
+    }
+  
+    // Maintenant, vous pouvez utiliser le token d'authentification
+    console.log(token);
+  
     // Rediriger vers le tableau de bord...
     this.router.navigateByUrl('/dashboard');
-    }
-
+  }
+ 
   async signIn(email: string, password: string) {
     await firebase.auth().signInWithEmailAndPassword(email, password);
   }
