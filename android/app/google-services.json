@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "447406888990",
+    "firebase_url": "https://propsync-system-356ef-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "propsync-system-356ef",
+    "storage_bucket": "propsync-system-356ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447406888990:android:e92c61ccf007dc71ad360f",
+        "android_client_info": {
+          "package_name": "com.example.propsync_system"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWjWePA844yvwC4NAZ8EcqUsOqbWhwSXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

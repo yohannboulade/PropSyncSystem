@@ -1,0 +1,47 @@
+[
+  {
+    "typeDeBien": "Appartement",
+    "adresse": "123 Rue de la Liberté",
+    "codePostal": "75001",
+    "ville": "Paris",
+    "loyer": 1200,
+    "pieces": 3,
+    "chambres": 2,
+    "surfaceHabitable": 80,
+    "classeEnergetique": "A",
+    "prixAchat": 300000,
+    "dateDebutPret": "2023-11-01",
+    "dateFinPret": "2033-11-01",
+    "mensualiteRemboursement": 1000
+  },
+  {
+    "typeDeBien": "Maison",
+    "adresse": "456 Avenue du Soleil",
+    "codePostal": "69002",
+    "ville": "Lyon",
+    "loyer": 1500,
+    "pieces": 4,
+    "chambres": 3,
+    "surfaceHabitable": 120,
+    "classeEnergetique": "B",
+    "prixAchat": 400000,
+    "dateDebutPret": "2023-10-15",
+    "dateFinPret": "2033-10-15",
+    "mensualiteRemboursement": 1200
+  },
+  {
+    "typeDeBien": "Studio",
+    "adresse": "789 Boulevard des Roses",
+    "codePostal": "33000",
+    "ville": "Bordeaux",
+    "loyer": 800,
+    "pieces": 1,
+    "chambres": 0,
+    "surfaceHabitable": 40,
+    "classeEnergetique": "C",
+    "prixAchat": 200000,
+    "dateDebutPret": "2023-12-05",
+    "dateFinPret": "2033-12-05",
+    "mensualiteRemboursement": 900
+  }
+]
